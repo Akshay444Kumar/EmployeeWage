@@ -2,6 +2,12 @@ package com.employeewage;
 
 public class EmployeeWage {
     public static void main(String[] args) {
+
+        EmployeeWage employeeWage = new EmployeeWage();
+        employeeWage.calculateEmployeeWage();
+    }
+
+    public void calculateEmployeeWage (){
         final int empWagePerHrs = 20;
         final int WORKING_DAYS_IN_MONTH = 20;
         final int MAX_HRS_IN_MONTH = 100;
@@ -11,7 +17,7 @@ public class EmployeeWage {
         int totalEmployeeHrs = 0;
         int totalWorkingDays = 0;
         while (totalEmployeeHrs <= MAX_HRS_IN_MONTH &&
-                totalWorkingDays <= WORKING_DAYS_IN_MONTH) {
+                totalWorkingDays < WORKING_DAYS_IN_MONTH) {
             totalWorkingDays++;
             int empCheck = (int) Math.floor(Math.random() * 10) % 3;
             switch (empCheck) {
